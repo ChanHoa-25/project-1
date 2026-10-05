@@ -92,7 +92,7 @@ img {
 }
 .header .inner-menu > ul {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -101,6 +101,7 @@ img {
 .header .inner-menu ul > li:hover > ul {
   display: block;
 }
+
 .header .inner-menu ul > li {
   position: relative;
 }
@@ -179,8 +180,76 @@ header .inner-menu ul > li > a:hover {
 }
 @media (max-width: 991.98px) {
   .header .inner-menu {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 0.3s;
   }
+  .header .inner-menu.active {
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .header .inner-menu > ul {
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .header .inner-menu > ul > li {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+  }
+  .header .inner-menu > ul > li > a {
+    flex: 1;
+    padding: 10px;
+  }
+  .header .inner-menu > ul > li > i {
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #ddd;
+  }
+  .header .inner-menu > ul > li > i {
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #ddd;
+  }
+  .header .inner-menu > ul > li:hover > ul {
+    display: none;
+    position: static;
+    padding: 0;
+  }
+  .header .inner-menu ul > li.active > i:before {
+    content: "\f078";
+  }
+  .header .inner-menu ul > li.active > ul {
+    display: block;
+  }
+  .header .inner-menu .inner-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000068;
+    transition: all 0.3s;
+  }
+  .header .inner-menu.active .inner-overlay {
+    left: 0;
+  }
+
   .inner-menu-mobile {
     display: inline-block;
     font-size: 22px;
@@ -736,11 +805,7 @@ header .inner-menu ul > li > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(
-    180deg,
-    rgba(69, 2, 199, 0) 58.85%,
-    rgba(69, 2, 199, 0.9) 100%
-  );
+  background: linear-gradient(180deg, rgba(69, 2, 199, 0) 58.85%, rgba(69, 2, 199, 0.9) 100%);
   padding: 18px 24px;
 }
 .blog-item .inner-content .inner-date {
@@ -1092,11 +1157,7 @@ footer .inner-top .inner-form input::placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(69, 2, 199, 0) 58.85%,
-    rgba(69, 2, 199, 0.9) 100%
-  );
+  background: linear-gradient(180deg, rgba(69, 2, 199, 0) 58.85%, rgba(69, 2, 199, 0.9) 100%);
   width: 100%;
   height: 100%;
   display: flex;
@@ -1908,12 +1969,7 @@ footer .inner-top .inner-form input::placeholder {
   color: #25282b;
   margin-bottom: 12px;
 }
-.section-11
-  .inner-tour-item
-  .inner-product
-  .inner-content
-  .inner-title
-  a:hover {
+.section-11 .inner-tour-item .inner-product .inner-content .inner-title a:hover {
   color: var(--color-primary);
 }
 .section-11 .inner-tour-item .inner-product .inner-meta {
