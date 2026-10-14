@@ -143,3 +143,17 @@ if (clockExpire) {
   const intervalClock = setInterval(updateClock, 1000);
 }
 //End Clock Expire Section-2
+
+//Box Fitter Mobile Section-9
+const buttonFitterMobile = document.querySelector(".section-9 .inner-right .inner-fitter-mobile");
+if (buttonFitterMobile) {
+  const boxLeft = document.querySelector(".section-9 .inner-left");
+  buttonFitterMobile.addEventListener("click", () => {
+    boxLeft.classList.add("active");
+  });
+
+  const overlay = document.querySelector(".section-9 .inner-left .inner-overlay");
+  overlay.addEventListener("click", () => {
+    boxLeft.classList.remove("active");
+  });
+}

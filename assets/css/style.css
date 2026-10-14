@@ -1459,9 +1459,33 @@ footer .inner-top .inner-form input::placeholder {
 .section-9 .inner-right .inner-fitter-mobile i {
   font-size: 16px;
 }
-@media (max-width: 1191.98px) {
+@media (max-width: 991.98px) {
   .section-9 .inner-left {
     display: none;
+  }
+  .section-9 .inner-left.active {
+    display: block;
+    position: fixed;
+    width: 280px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+  }
+  .section-9 .inner-left.active .box-fitter {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .section-9 .inner-left .inner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #00000068;
   }
   .section-9 .inner-right {
     width: 100%;
@@ -1486,9 +1510,13 @@ footer .inner-top .inner-form input::placeholder {
     margin-bottom: 16px;
   }
 }
+
 @media (max-width: 767.98px) {
   .section-9 .inner-right .inner-list-tour {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .section-9 .inner-left.active {
+    display: block;
   }
 }
 @media (max-width: 575.98px) {
