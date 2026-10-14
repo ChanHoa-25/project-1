@@ -157,3 +157,19 @@ if (buttonFitterMobile) {
     boxLeft.classList.remove("active");
   });
 }
+//End Box Fitter Mobile Section-9
+
+//Box Tour Infor
+const boxTourInfor = document.querySelector(".box-tour-infor");
+if (boxTourInfor) {
+  const buttonReadMore = boxTourInfor.querySelector(".inner-read-more button");
+  buttonReadMore.addEventListener("click", () => {
+    if (boxTourInfor.classList.contains("active")) {
+      boxTourInfor.classList.remove("active");
+      buttonReadMore.innerHTML = `Xem tất cả`;
+    } else {
+      boxTourInfor.classList.add("active");
+      buttonReadMore.innerHTML = `Ẩn bớt`;
+    }
+  });
+}

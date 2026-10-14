@@ -1944,6 +1944,16 @@ footer .inner-top .inner-form input::placeholder {
   color: var(--color-primary);
   margin-bottom: 15px;
 }
+.box-tour-infor .inner-content {
+  height: 500px;
+  overflow: hidden;
+}
+.box-tour-infor.active .inner-content {
+  height: auto;
+}
+/* .box-tour-infor.active .inner-read-more {
+  display: none;
+} */
 .box-tour-infor .inner-content p {
   font-size: 14px;
   font-weight: 300;
@@ -1960,6 +1970,7 @@ footer .inner-top .inner-form input::placeholder {
   text-align: center;
   margin-top: 20px;
 }
+
 @media (max-width: 575.98px) {
   .box-tour-infor {
     padding: 15px;
