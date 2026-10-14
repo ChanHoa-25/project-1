@@ -105,3 +105,41 @@ if (boxUserSection1) {
 }
 
 // End Box User Quannity Section-1
+
+// Clock Expire Section-2
+const clockExpire = document.querySelector("[clock-expire]");
+if (clockExpire) {
+  const expireDateTimeString = clockExpire.getAttribute("clock-expire");
+  console.log(expireDateTimeString);
+
+  //Chuyển đổi chuỗi thời gian thành đối tượng date
+  const expireDateTime = new Date(expireDateTimeString);
+  const updateClock = () => {
+    const now = new Date();
+    const remaningTime = expireDateTime - now; //quy về đơn vị mili giây
+    if (remaningTime > 0) {
+      //Tính số ngày
+      const days = Math.floor(remaningTime / (24 * 60 * 60 * 1000));
+
+      //Tính số giờ
+      const hours = Math.floor((remaningTime / (60 * 60 * 100)) % 24);
+
+      //Tính số phút
+      const minutes = Math.floor((remaningTime / (60 * 100)) % 60);
+
+      //Tính số giây
+      const seconds = Math.floor((remaningTime / 1000) % 60);
+
+      const listBoxNumber = clockExpire.querySelectorAll(".inner-number");
+      listBoxNumber[0].innerHTML = `${days}`.padStart(2, "0");
+      listBoxNumber[1].innerHTML = `${hours}`.padStart(2, "0");
+      listBoxNumber[2].innerHTML = `${minutes}`.padStart(2, "0");
+      listBoxNumber[3].innerHTML = `${seconds}`.padStart(2, "0");
+    } else {
+      clearInterval(intervalClock);
+    }
+  };
+  // Gọi hàm cập nhật đồng hồ sau mỗi giây
+  const intervalClock = setInterval(updateClock, 1000);
+}
+//End Clock Expire Section-2

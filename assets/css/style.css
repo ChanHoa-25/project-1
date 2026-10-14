@@ -568,18 +568,27 @@ header .inner-menu ul > li > a:hover {
   gap: 17px;
   margin-bottom: 47px;
 }
-.section-2 .inner-info .inner-clock-number span {
+.section-2 .inner-info .inner-clock-number .inner-item {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 57px;
   width: 57px;
   border-radius: 10px;
-  color: var(--color-primary);
   background-color: #fff;
-  font-weight: 500;
-  font-size: 30px;
 }
+.section-2 .inner-info .inner-clock-number .inner-item .inner-number {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+.section-2 .inner-info .inner-clock-number .inner-item .inner-label {
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--color-text);
+}
+
 .section-2 .inner-info .inner-discount-title {
   text-transform: uppercase;
   font-size: 16px;
