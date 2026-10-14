@@ -429,6 +429,68 @@ header .inner-menu ul > li > a:hover {
   font-weight: 400;
   color: #a6a6a6;
 }
+.section-1 .inner-form .inner-box .inner-quantity {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: none;
+}
+.section-1 .inner-form .inner-box.active .inner-quantity {
+  display: block;
+}
+.section-1 .inner-form .inner-box .inner-quantity .inner-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid#ececec;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+.section-1 .inner-form .inner-box .inner-quantity .inner-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.section-1 .inner-form .inner-box .inner-quantity .inner-item .inner-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a6a6a6;
+}
+
+.section-1 .inner-form .inner-box .inner-quantity .inner-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-1 .inner-form .inner-box .inner-quantity .inner-count .inner-down,
+.section-1 .inner-form .inner-box .inner-quantity .inner-count .inner-up {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  color: var(--color-primary);
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-1 .inner-form .inner-box .inner-quantity .inner-count .inner-number {
+  color: var(--color-primary);
+  width: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 991.98px) {
   .section-1 .inner-wrap {
