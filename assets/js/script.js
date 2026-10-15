@@ -172,6 +172,7 @@ if (boxTourInfor) {
       buttonReadMore.innerHTML = `Ẩn bớt`;
     }
   });
+  new Viewer(boxTourInfor);
 }
 // End Box Tour Infor
 
@@ -249,3 +250,17 @@ if (boxImages) {
 }
 
 // End Swiper-box-images
+
+// Zoom Box Images Main
+const boxImagesMain = document.querySelector(".box-images .inner-images-main");
+if (boxImagesMain) {
+  new Viewer(boxImagesMain);
+}
+//End Zoom Box Images Main
+
+//Zoom Box Tour Schedule
+const boxTourSchedule = document.querySelector(".box-tour-schedule");
+if (boxTourSchedule) {
+  new Viewer(boxTourSchedule);
+}
+//End Zoom Box Tour Schedule
