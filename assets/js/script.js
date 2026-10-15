@@ -225,3 +225,27 @@ if (swiperSection3) {
     },
   });
 }
+//End Swiper Section-3
+
+// Swiper-box-images
+const boxImages = document.querySelector(".box-images");
+if (boxImages) {
+  const swiperBoxImagesThumb = new Swiper(".swiper-box-images-thumb", {
+    spaceBetween: 5,
+    slidesPerView: 4,
+    breakpoints: {
+      576: {
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  var swiperBoxImagesMain = new Swiper(".swiper-box-images-main", {
+    spaceBetween: 0,
+    thumbs: {
+      swiper: swiperBoxImagesThumb,
+    },
+  });
+}
+
+// End Swiper-box-images

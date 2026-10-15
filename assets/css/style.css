@@ -1748,11 +1748,11 @@ footer .inner-top .inner-form input::placeholder {
   height: 100%;
   object-fit: cover;
 }
-.box-images .inner-images-thumbs {
+/* .box-images .inner-images-thumbs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-}
+} */
 .box-images .inner-images-thumbs .inner-image {
   aspect-ratio: 166/129;
   border-radius: 10px;
@@ -1769,9 +1769,9 @@ footer .inner-top .inner-form input::placeholder {
     margin-bottom: 15px;
     gap: 5px;
   }
-  .box-images .inner-images-thumbs {
+  /* .box-images .inner-images-thumbs {
     gap: 5px;
-  }
+  } */
 }
 
 /* End Box Images */
