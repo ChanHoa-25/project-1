@@ -177,3 +177,25 @@ if (boxTourInfor) {
 
 //Khởi tạo thư viện AOS
 AOS.init();
+
+//Swiper Section-2
+const swiperSection2 = document.querySelector(".swiper-section-2");
+if (swiperSection2) {
+  new Swiper(".swiper-section-2", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
