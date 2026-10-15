@@ -199,3 +199,29 @@ if (swiperSection2) {
     },
   });
 }
+//End Swiper Section-2
+//Swiper Section-3
+const swiperSection3 = document.querySelector(".swiper-section-3");
+if (swiperSection3) {
+  new Swiper(".swiper-section-3", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
