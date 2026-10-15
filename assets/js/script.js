@@ -173,3 +173,7 @@ if (boxTourInfor) {
     }
   });
 }
+// End Box Tour Infor
+
+//Khởi tạo thư viện AOS
+AOS.init();
