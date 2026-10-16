@@ -1108,6 +1108,17 @@ header .inner-menu ul > li > a:hover {
   border-radius: 10px;
   gap: 12px;
   padding: 12px;
+  position: relative;
+}
+.footer .inner-top .inner-form .just-validate-error-label {
+  position: absolute;
+  left: 14px;
+  top: 104%;
+  color: #fff !important;
+  font-size: 12px;
+}
+.footer .inner-top .inner-form input.just-validate-error-field {
+  border-color: red;
 }
 .footer .inner-top .inner-form input {
   flex: 1;
