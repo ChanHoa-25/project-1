@@ -286,3 +286,78 @@ if (emailForm) {
       console.log(email);
     });
 }
+//Tích hợp thư viện validate cho form-coupon
+const couponForm = document.querySelector("#coupon-form");
+if (couponForm) {
+  const validator = new JustValidate("#coupon-form");
+
+  validator
+    .addField("#coupon-input", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng nhập mã coupon!",
+      },
+    ])
+    .onSuccess((event) => {
+      const coupon = event.target.coupon.value;
+      console.log(coupon);
+    });
+}
+//Tích hợp thư viện validate cho form-order
+const orderForm = document.querySelector("#order-form");
+if (orderForm) {
+  const validator = new JustValidate("#order-form");
+
+  validator
+    .addField("#full-name-input", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng họ và tên!",
+      },
+      {
+        rule: "minLength",
+        value: 5,
+        errorMessage: "Họ và tên phải có ít nhất 5 ký tự!",
+      },
+      {
+        rule: "maxLength",
+        value: 50,
+        errorMessage: "Họ và tên không được vượt quá 50 ký tự!",
+      },
+    ])
+    .onSuccess((event) => {});
+  validator
+    .addField("#phone-input", [
+      {
+        rule: "required",
+        errorMessage: "Vui lòng số điện thoại!",
+      },
+      {
+        rule: "customRegexp",
+        value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/g,
+        errorMessage: "Số điện thoại không đúng định dạng!",
+      },
+    ])
+    .onSuccess((event) => {
+      const phone = event.target.phone.value;
+      const fullName = event.target.fullName.value;
+      const note = event.target.note.value;
+      const method = event.target.method.value;
+      console.log(fullName);
+      console.log(phone);
+      console.log(note);
+      console.log(method);
+    });
+
+  const listInputMethod = orderForm.querySelectorAll(`input[name="method"]`);
+  const elementInforBank = orderForm.querySelector(".inner-infor-bank");
+  listInputMethod.forEach((inputMethod) => {
+    inputMethod.addEventListener("change", () => {
+      if (inputMethod.value == "bank") {
+        elementInforBank.classList.add("active");
+      } else {
+        elementInforBank.classList.remove("active");
+      }
+    });
+  });
+}

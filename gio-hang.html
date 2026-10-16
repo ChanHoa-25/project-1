@@ -111,7 +111,7 @@
                 <button class="inner-delete">
                   <i class="fa-solid fa-x"></i>
                 </button>
-                <input type="checkbox" class="inner-check"></input>
+                <input type="radio" class="inner-check"></input>
               </div>
               <div class="inner-product">
                 <div class="inner-image">
@@ -181,8 +181,8 @@
             </div>
           </div>
           <div class="inner-coupon">
-            <form action="">
-              <input type="text" placeholder="Nhập mã giảm giá">
+            <form action="" id="coupon-form">
+              <input type="text" placeholder="Nhập mã giảm giá" id="coupon-input" name="coupon">
               <button>Dùng mã</button>
             </form>
           </div>
@@ -213,43 +213,51 @@
     </div>
     <!-- End Section 11 -->
      <!-- Section 12 -->
-      <div class="section-12"><div class="container">
+      <div class="section-12">
+        <div class="container">
         <div class="inner-wrap">
-         <form action="" class="inner-infor">
-          <div class="inner-title-main">Thông tin khách hàng</div>
-          <div class="inner-input">
-            <input type="text" placeholder="Họ và tên">
-            <input type="number" placeholder="Số điện thoại">
-          </div>
-          <textarea name="note" id="" placeholder="Ghi chú"></textarea>
-          <div class="inner-method">
-            <div class="inner-title-main">Chọn phương thức thanh toán</div>
-            <div class="inner-list">
-              <div class="inner-item">
-                <input type="checkbox" name="method" id="methodMoney" checked>
-                <label for="methodMoney">Thanh toán tiền mặt khi đi tour</label>
+          <form action=""id="order-form">
+            <div class="inner-infor">
+              <div class="inner-title-main">Thông tin khách hàng</div>
+              <div class="inner-inputs">
+                <div class="inner-input">
+                    <input type="text" placeholder="Họ và tên" id="full-name-input" name="fullName">
+                </div>
+                <div class="inner-input">
+                  <input id="phone-input" type="text" name="phone" placeholder="Số điện thoại">
+                </div>
               </div>
-              <div class="inner-item">
-                <input type="checkbox" name="method" id="methoMomo">
-                <label for="methodMomo">Ví momo</label>
+              <textarea name="note" id="" placeholder="Ghi chú"></textarea>
+            </div>
+              <div class="inner-method">
+                <div class="inner-title-main">Chọn phương thức thanh toán</div>
+                <div class="inner-list">
+                  <div class="inner-item">
+                    <input type="radio" name="method" id="methodMoney" value="money" checked>
+                    <label for="methodMoney">Thanh toán tiền mặt khi đi tour</label>
+                  </div>
+                  <div class="inner-item">
+                    <input type="radio" name="method" id="methodMomo" value="momo">
+                    <label for="methodMomo">Ví momo</label>
+                  </div>
+                  <div class="inner-item">
+                    <input type="radio" name="method" id="methodBank" value="bank">
+                    <label for="methodBank">Chuyển khoản ngân hàng</label>
+                  </div>
               </div>
-              <div class="inner-item">
-                <input type="checkbox" name="method" id="methodBank">
-                <label for="methodBank">Chuyển khoản ngân hàng</label>
+              <div class="inner-infor-bank">
+                <div class="inner-title">Thông tin chuyển khoản</div>
+                <div class="inner-text">Ngân hàng : Vietcombank</div>
+                <div class="inner-text">Tên tài khoản: Le Van A</div>
+                <div class="inner-text">STK: 0123456789</div>
               </div>
             </div>
+            <div class="inner-button"><button>Đặt tour</button>
+              </div>
+            </form>
           </div>
-          <div class="inner-infor-bank">
-            <div class="inner-title">Thông tin chuyển khoản</div>
-            <div class="inner-text">Ngân hàng : Vietcombank</div>
-            <div class="inner-text">Tên tài khoản: Le Van A</div>
-            <div class="inner-text">STK: 0123456789</div>
-          </div>
-          <div class="inner-button"><button>Đặt tour</button>
-          </div>
-         </form>
         </div>
-      </div></div>
+      </div>
      <!-- End Section 12 -->
     <!-- Footer -->
     <footer class="footer">

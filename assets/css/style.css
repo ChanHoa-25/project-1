@@ -2266,6 +2266,7 @@ footer .inner-top .inner-form input::placeholder {
 .section-11 .inner-coupon form {
   width: 50%;
   display: flex;
+  position: relative;
 }
 .section-11 .inner-coupon form input {
   flex: 1;
@@ -2278,6 +2279,15 @@ footer .inner-top .inner-form input::placeholder {
   font-size: 14px;
   font-weight: 400;
   color: #333333;
+}
+.section-11 .inner-coupon form .just-validate-error-label {
+  position: absolute;
+  left: 0;
+  top: 104%;
+  font-size: 12px;
+}
+.section-11 .inner-coupon form input.just-validate-error-field {
+  border-color: red;
 }
 .section-11 .inner-coupon form button {
   border-radius: 0 5px 5px 0;
@@ -2397,20 +2407,35 @@ footer .inner-top .inner-form input::placeholder {
   box-shadow: 0 3.05px 3.81px 0px #00000026;
   padding: 30px 20px;
 }
-.section-12 .inner-infor .inner-title-main {
+.section-12 .inner-title-main {
   font-weight: 600;
   font-size: 20px;
   color: var(--color-primary);
   margin-bottom: 25px;
 }
-.section-12 .inner-infor .inner-input {
+.section-12 .inner-infor {
   margin-bottom: 30px;
 }
-.section-12 .inner-infor .inner-input {
+.section-12 .inner-infor .inner-inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px 20px;
-  margin-bottom: 15px;
+  gap: 25px 20px;
+  margin-bottom: 25px;
+}
+.section-12 .inner-infor .inner-input {
+  position: relative;
+}
+.section-12 .inner-infor .inner-input .just-validate-error-label {
+  position: absolute;
+  top: 104%;
+  left: 0;
+  font-size: 12px;
+}
+.section-12 .inner-infor .inner-input .just-validate-error-field {
+  border-color: red;
+}
+.section-12 .inner-infor .inner-input .just-validate-success-field {
+  border-color: green;
 }
 .section-12 .inner-infor .inner-input input,
 .section-12 .inner-infor textarea {
@@ -2434,51 +2459,60 @@ footer .inner-top .inner-form input::placeholder {
 .section-12 .inner-infor textarea {
   height: 100px;
 }
-.section-12 .inner-infor .inner-method {
+.section-12 .inner-method {
   margin-bottom: 20px;
 }
-.section-12 .inner-infor .inner-method .inner-list {
+.section-12 .inner-method .inner-list {
   display: flex;
   flex-direction: column;
-  grid-area: 10px;
+  gap: 10px;
 }
-.section-12 .inner-infor .inner-method .inner-list .inner-item input {
+.section-12 .inner-method .inner-list .inner-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-12 .inner-method .inner-list .inner-item input {
   margin: 0;
   width: 21px;
   height: 21px;
   cursor: pointer;
   accent-color: var(--color-primary);
 }
-.section-12 .inner-infor .inner-method .inner-list .inner-item label {
+.section-12 .inner-method .inner-list .inner-item label {
   font-size: 14px;
   font-weight: 400;
   color: #333333;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
-.section-12 .inner-infor .inner-infor-bank {
+.section-12 .inner-method .inner-infor-bank {
   border-radius: 5px;
   background-color: #f3f3f3;
   padding: 15px;
   margin-top: 20px;
   margin-bottom: 30px;
+  display: none;
 }
-.section-12 .inner-infor .inner-infor-bank .inner-title {
+.section-12 .inner-method .inner-infor-bank.active {
+  display: block;
+}
+.section-12 .inner-method .inner-infor-bank .inner-title {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-primary);
   margin-bottom: 10px;
 }
-.section-12 .inner-infor .inner-infor-bank .inner-text {
+.section-12 .inner-infor-bank .inner-text {
   font-size: 14px;
   font-weight: 400;
   color: #4f4f4f;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
-.section-12 .inner-infor .inner-button {
+.section-12 .inner-button {
   margin-top: 30px;
   text-align: center;
 }
-.section-12 .inner-infor .inner-button button {
+.section-12 .inner-button button {
   color: #fff;
   width: 50%;
   height: 46px;
@@ -2502,10 +2536,10 @@ footer .inner-top .inner-form input::placeholder {
   .section-12 .inner-infor .inner-title-main {
     font-weight: 16;
   }
-  .section-12 .inner-infor .inner-input {
+  .section-12 .inner-infor .inner-inputs {
     grid-template-columns: repeat(1, 1fr);
   }
-  .section-12 .inner-infor .inner-button button {
+  .section-12 .inner-button button {
     width: 100%;
   }
 } /* End Section 12 */
